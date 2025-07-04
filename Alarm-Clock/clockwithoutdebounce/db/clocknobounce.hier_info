@@ -1,0 +1,22 @@
+|clocknobounce
+S0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clock => inst1.CLK
+clock => inst2.CLK
+clock => inst3.CLK
+clock => inst4.CLK
+clock => inst.CLK
+Reset => 2to1mux:mux.S
+S1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S4 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clocknobounce|2to1mux:mux
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+

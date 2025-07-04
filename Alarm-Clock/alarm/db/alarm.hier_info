@@ -1,0 +1,14 @@
+|alarm
+Alarm <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+Clock0 => inst.IN0
+Reg0 => inst.IN1
+Clock1 => inst1.IN0
+Reg1 => inst1.IN1
+Clock2 => inst2.IN0
+Reg2 => inst2.IN1
+Clock3 => inst3.IN0
+Reg3 => inst3.IN1
+Clock4 => inst4.IN0
+Reg4 => inst4.IN1
+
+

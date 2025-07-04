@@ -1,0 +1,945 @@
+|alarmclockfinal
+MinL0 <= seven_seg_decoder:inst19.A
+clock => clockGenerator:inst1.clock_in
+clock => debouncer:inst32.Board
+clock => single6bitregister:inst15.Clock
+clock => 60count:inst14.board
+clock => debouncer:hrsetdebounce.Board
+clock => single5bitregister:inst23.Clock
+clock => fullClock:HrClock.board
+RESET => clockGenerator:inst1.CLRN
+RESET => 60countnodebounce:inst28.reset
+RESET => 60countnodebounce:inst.reset
+RESET => notreg.IN0
+RESET => 60count:inst14.reset
+RESET => clocknobounce:inst8.Reset
+RESET => notreg1.IN0
+RESET => fullClock:HrClock.Reset
+RESET => inst31.IN0
+ClockSet => 2to1mux:inst33.S
+ClockSet => 2to1mux:hrsetmux.S
+MinSet => debouncer:inst32.Manual
+alarmWrite => 2to1mux:inst2.S
+alarmWrite => single6bitregister:inst15.Load
+alarmWrite => inst17.IN0
+alarmWrite => 2to1mux:inst3.S
+alarmWrite => 2to1mux:inst4.S
+alarmWrite => 2to1mux:inst5.S
+alarmWrite => 2to1mux:inst6.S
+alarmWrite => 2to1mux:inst7.S
+alarmWrite => 2to1mux:inst9.S
+alarmWrite => single5bitregister:inst23.Load
+alarmWrite => inst22.IN0
+alarmWrite => 2to1mux:inst10.S
+alarmWrite => 2to1mux:inst11.S
+alarmWrite => 2to1mux:inst12.S
+alarmWrite => 2to1mux:inst13.S
+alarmMinIncrement => inst16.IN0
+MinL1 <= seven_seg_decoder:inst19.B
+MinL2 <= seven_seg_decoder:inst19.C
+MinL3 <= seven_seg_decoder:inst19.D
+MinL4 <= seven_seg_decoder:inst19.E
+MinL5 <= seven_seg_decoder:inst19.F
+MinL6 <= seven_seg_decoder:inst19.G
+MinR0 <= seven_seg_decoder:inst20.A
+MInR1 <= seven_seg_decoder:inst20.B
+MinR2 <= seven_seg_decoder:inst20.C
+MinR3 <= seven_seg_decoder:inst20.D
+MinR4 <= seven_seg_decoder:inst20.E
+MinR5 <= seven_seg_decoder:inst20.F
+MinR6 <= seven_seg_decoder:inst20.G
+HrL0 <= seven_seg_decoder:inst25.A
+HrSet => debouncer:hrsetdebounce.Manual
+alarmHrIncrement => inst21.IN0
+HrL1 <= seven_seg_decoder:inst25.B
+HrL2 <= seven_seg_decoder:inst25.C
+HrL3 <= seven_seg_decoder:inst25.D
+HrL4 <= seven_seg_decoder:inst25.E
+HrL5 <= seven_seg_decoder:inst25.F
+HrL6 <= seven_seg_decoder:inst25.G
+HrR0 <= seven_seg_decoder:inst26.A
+HrR1 <= seven_seg_decoder:inst26.B
+HrR2 <= seven_seg_decoder:inst26.C
+HrR3 <= seven_seg_decoder:inst26.D
+HrR4 <= seven_seg_decoder:inst26.E
+HrR5 <= seven_seg_decoder:inst26.F
+HrR6 <= seven_seg_decoder:inst26.G
+secondBlinker <= inst29.DB_MAX_OUTPUT_PORT_TYPE
+Alarm0 <= 2to1mux:inst39.out
+AlarmOn/Off => 2to1mux:inst39.S
+Alarm1 <= 2to1mux:inst39.out
+Alarm2 <= 2to1mux:inst39.out
+Alarm3 <= 2to1mux:inst39.out
+
+
+|alarmclockfinal|seven_seg_decoder:inst19
+x3 => Decoder0.IN0
+x2 => Decoder0.IN1
+x1 => Decoder0.IN2
+x0 => Decoder0.IN3
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|bcd_converter2:inst18
+S0 => N1X0.DATAIN
+S1 => N2X0.IN0
+S1 => N2X0.IN1
+S1 => N2X0.IN1
+S1 => N1X3.IN1
+S1 => N1X3.IN1
+S1 => N1X3.IN1
+S1 => N1X2.IN1
+S1 => N1X2.IN1
+S1 => N1X2.IN1
+S1 => N1X1.IN1
+S1 => N1X1.IN1
+S1 => N1X3.IN1
+S1 => N1X3.IN1
+S1 => N1X3.IN1
+S1 => N1X2.IN1
+S1 => N1X2.IN1
+S1 => N1X2.IN1
+S1 => N1X1.IN1
+S1 => N1X1.IN1
+S1 => N1X1.IN1
+S2 => N2X1.IN0
+S2 => N2X1.IN1
+S2 => N2X0.IN0
+S2 => N2X0.IN1
+S2 => N2X0.IN0
+S2 => N1X3.IN1
+S2 => N1X2.IN1
+S2 => N2X0.IN1
+S2 => N2X0.IN1
+S2 => N1X3.IN1
+S2 => N1X2.IN0
+S2 => N1X2.IN1
+S3 => N2X2.IN0
+S3 => N2X1.IN0
+S3 => N2X0.IN0
+S3 => N2X0.IN1
+S3 => N2X1.IN1
+S3 => N2X0.IN0
+S3 => N2X0.IN1
+S3 => N2X0.IN1
+S3 => N2X0.IN0
+S4 => N2X2.IN1
+S4 => N2X1.IN1
+S4 => N2X1.IN1
+S4 => N2X0.IN1
+S4 => N1X2.IN1
+S4 => N2X1.IN0
+S4 => N2X0.IN1
+S4 => N2X0.IN1
+C0 => N2X2.IN1
+C0 => N2X1.IN1
+C0 => N2X0.IN1
+C0 => N1X3.IN1
+C0 => N1X2.IN1
+C0 => N1X1.IN1
+C0 => N2X1.IN1
+C0 => N2X0.IN1
+C0 => N1X3.IN1
+C0 => N1X2.IN1
+C0 => N1X1.IN1
+N2X3 <= <GND>
+N2X2 <= N2X2.DB_MAX_OUTPUT_PORT_TYPE
+N2X1 <= N2X1.DB_MAX_OUTPUT_PORT_TYPE
+N2X0 <= N2X0.DB_MAX_OUTPUT_PORT_TYPE
+N1X3 <= N1X3.DB_MAX_OUTPUT_PORT_TYPE
+N1X2 <= N1X2.DB_MAX_OUTPUT_PORT_TYPE
+N1X1 <= N1X1.DB_MAX_OUTPUT_PORT_TYPE
+N1X0 <= S0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|2to1mux:inst2
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|60countnodebounce:inst
+reset => reset.IN1
+clock => SYNTHESIZED_WIRE_24.CLK
+clock => SYNTHESIZED_WIRE_25.CLK
+clock => SYNTHESIZED_WIRE_26.CLK
+clock => TFF_inst12.CLK
+clock => TFF_inst1.CLK
+clock => TFF_inst.CLK
+S0 <= TFF_inst.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= TFF_inst1.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= SYNTHESIZED_WIRE_26.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= SYNTHESIZED_WIRE_25.DB_MAX_OUTPUT_PORT_TYPE
+S4 <= SYNTHESIZED_WIRE_24.DB_MAX_OUTPUT_PORT_TYPE
+S5 <= TFF_inst12.DB_MAX_OUTPUT_PORT_TYPE
+clockout <= SYNTHESIZED_WIRE_4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|60countnodebounce:inst|2to1mux:b2v_inst10
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|2to1mux:inst33
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|60countnodebounce:inst28
+reset => reset.IN1
+clock => SYNTHESIZED_WIRE_24.CLK
+clock => SYNTHESIZED_WIRE_25.CLK
+clock => SYNTHESIZED_WIRE_26.CLK
+clock => TFF_inst12.CLK
+clock => TFF_inst1.CLK
+clock => TFF_inst.CLK
+S0 <= TFF_inst.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= TFF_inst1.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= SYNTHESIZED_WIRE_26.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= SYNTHESIZED_WIRE_25.DB_MAX_OUTPUT_PORT_TYPE
+S4 <= SYNTHESIZED_WIRE_24.DB_MAX_OUTPUT_PORT_TYPE
+S5 <= TFF_inst12.DB_MAX_OUTPUT_PORT_TYPE
+clockout <= SYNTHESIZED_WIRE_4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|60countnodebounce:inst28|2to1mux:b2v_inst10
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|clockGenerator:inst1
+CLRN => CLRN.IN10
+clock_in => clock_in.IN1
+clock_out <= clock_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_5:b2v_inst
+clock => SYNTHESIZED_WIRE_12.CLK
+clock => SYNTHESIZED_WIRE_11.CLK
+clock => SYNTHESIZED_WIRE_10.CLK
+CLRN => SYNTHESIZED_WIRE_4.IN1
+divide_by_5 <= divide_by_5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst1
+clock => clock.IN1
+CLRN => CLRN.IN2
+divide_by_10 <= divide_by_5:b2v_div5.divide_by_5
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst1|divide_by_2:b2v_div2
+clock => divide_by_2~reg0.CLK
+CLRN => divide_by_2~reg0.ACLR
+divide_by_2 <= divide_by_2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst1|divide_by_5:b2v_div5
+clock => SYNTHESIZED_WIRE_12.CLK
+clock => SYNTHESIZED_WIRE_11.CLK
+clock => SYNTHESIZED_WIRE_10.CLK
+CLRN => SYNTHESIZED_WIRE_4.IN1
+divide_by_5 <= divide_by_5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_2:b2v_inst12
+clock => divide_by_2~reg0.CLK
+CLRN => divide_by_2~reg0.ACLR
+divide_by_2 <= divide_by_2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_2:b2v_inst13
+clock => divide_by_2~reg0.CLK
+CLRN => divide_by_2~reg0.ACLR
+divide_by_2 <= divide_by_2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst2
+clock => clock.IN1
+CLRN => CLRN.IN2
+divide_by_10 <= divide_by_5:b2v_div5.divide_by_5
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst2|divide_by_2:b2v_div2
+clock => divide_by_2~reg0.CLK
+CLRN => divide_by_2~reg0.ACLR
+divide_by_2 <= divide_by_2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst2|divide_by_5:b2v_div5
+clock => SYNTHESIZED_WIRE_12.CLK
+clock => SYNTHESIZED_WIRE_11.CLK
+clock => SYNTHESIZED_WIRE_10.CLK
+CLRN => SYNTHESIZED_WIRE_4.IN1
+divide_by_5 <= divide_by_5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst3
+clock => clock.IN1
+CLRN => CLRN.IN2
+divide_by_10 <= divide_by_5:b2v_div5.divide_by_5
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst3|divide_by_2:b2v_div2
+clock => divide_by_2~reg0.CLK
+CLRN => divide_by_2~reg0.ACLR
+divide_by_2 <= divide_by_2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst3|divide_by_5:b2v_div5
+clock => SYNTHESIZED_WIRE_12.CLK
+clock => SYNTHESIZED_WIRE_11.CLK
+clock => SYNTHESIZED_WIRE_10.CLK
+CLRN => SYNTHESIZED_WIRE_4.IN1
+divide_by_5 <= divide_by_5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst4
+clock => clock.IN1
+CLRN => CLRN.IN2
+divide_by_10 <= divide_by_5:b2v_div5.divide_by_5
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst4|divide_by_2:b2v_div2
+clock => divide_by_2~reg0.CLK
+CLRN => divide_by_2~reg0.ACLR
+divide_by_2 <= divide_by_2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst4|divide_by_5:b2v_div5
+clock => SYNTHESIZED_WIRE_12.CLK
+clock => SYNTHESIZED_WIRE_11.CLK
+clock => SYNTHESIZED_WIRE_10.CLK
+CLRN => SYNTHESIZED_WIRE_4.IN1
+divide_by_5 <= divide_by_5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst5
+clock => clock.IN1
+CLRN => CLRN.IN2
+divide_by_10 <= divide_by_5:b2v_div5.divide_by_5
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst5|divide_by_2:b2v_div2
+clock => divide_by_2~reg0.CLK
+CLRN => divide_by_2~reg0.ACLR
+divide_by_2 <= divide_by_2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst5|divide_by_5:b2v_div5
+clock => SYNTHESIZED_WIRE_12.CLK
+clock => SYNTHESIZED_WIRE_11.CLK
+clock => SYNTHESIZED_WIRE_10.CLK
+CLRN => SYNTHESIZED_WIRE_4.IN1
+divide_by_5 <= divide_by_5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst7
+clock => clock.IN1
+CLRN => CLRN.IN2
+divide_by_10 <= divide_by_5:b2v_div5.divide_by_5
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst7|divide_by_2:b2v_div2
+clock => divide_by_2~reg0.CLK
+CLRN => divide_by_2~reg0.ACLR
+divide_by_2 <= divide_by_2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst7|divide_by_5:b2v_div5
+clock => SYNTHESIZED_WIRE_12.CLK
+clock => SYNTHESIZED_WIRE_11.CLK
+clock => SYNTHESIZED_WIRE_10.CLK
+CLRN => SYNTHESIZED_WIRE_4.IN1
+divide_by_5 <= divide_by_5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_int6
+clock => clock.IN1
+CLRN => CLRN.IN2
+divide_by_10 <= divide_by_5:b2v_div5.divide_by_5
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_int6|divide_by_2:b2v_div2
+clock => divide_by_2~reg0.CLK
+CLRN => divide_by_2~reg0.ACLR
+divide_by_2 <= divide_by_2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_int6|divide_by_5:b2v_div5
+clock => SYNTHESIZED_WIRE_12.CLK
+clock => SYNTHESIZED_WIRE_11.CLK
+clock => SYNTHESIZED_WIRE_10.CLK
+CLRN => SYNTHESIZED_WIRE_4.IN1
+divide_by_5 <= divide_by_5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|debouncer:inst32
+Manual => Smooth~reg0.DATAIN
+Board => Board.IN1
+Smooth <= Smooth~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|debouncer:inst32|clock_divider_1024:b2v_inst
+CLK_OUT <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+CLK_IN => inst1.CLK
+CLK_IN => inst2.CLK
+CLK_IN => inst3.CLK
+CLK_IN => inst4.CLK
+CLK_IN => inst5.CLK
+CLK_IN => inst6.CLK
+CLK_IN => inst7.CLK
+CLK_IN => inst8.CLK
+CLK_IN => inst9.CLK
+CLK_IN => inst10.CLK
+
+
+|alarmclockfinal|debouncer:inst32|clock_divider_1024:b2v_inst1
+CLK_OUT <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+CLK_IN => inst1.CLK
+CLK_IN => inst2.CLK
+CLK_IN => inst3.CLK
+CLK_IN => inst4.CLK
+CLK_IN => inst5.CLK
+CLK_IN => inst6.CLK
+CLK_IN => inst7.CLK
+CLK_IN => inst8.CLK
+CLK_IN => inst9.CLK
+CLK_IN => inst10.CLK
+
+
+|alarmclockfinal|single6bitregister:inst15
+Load => Load.IN6
+Clock => DFF_inst9.CLK
+Clock => DFF_inst7.CLK
+Clock => DFF_inst5.CLK
+Clock => DFF_inst11.CLK
+Clock => DFF_inst1.CLK
+Clock => DFF_inst.CLK
+Reset => DFF_inst1.ACLR
+Reset => DFF_inst11.ACLR
+Reset => DFF_inst9.ACLR
+Reset => DFF_inst7.ACLR
+Reset => DFF_inst5.ACLR
+Reset => DFF_inst.ACLR
+IN0 => IN0.IN1
+IN1 => IN1.IN1
+IN2 => IN2.IN1
+IN3 => IN3.IN1
+IN4 => IN4.IN1
+IN5 => IN5.IN1
+OUT0 <= DFF_inst1.DB_MAX_OUTPUT_PORT_TYPE
+OUT1 <= DFF_inst11.DB_MAX_OUTPUT_PORT_TYPE
+OUT2 <= DFF_inst9.DB_MAX_OUTPUT_PORT_TYPE
+OUT3 <= DFF_inst7.DB_MAX_OUTPUT_PORT_TYPE
+OUT4 <= DFF_inst5.DB_MAX_OUTPUT_PORT_TYPE
+OUT5 <= DFF_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|single6bitregister:inst15|2to1mux:b2v_inst10
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|single6bitregister:inst15|2to1mux:b2v_inst12
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|single6bitregister:inst15|2to1mux:b2v_inst14
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|single6bitregister:inst15|2to1mux:b2v_inst4
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|single6bitregister:inst15|2to1mux:b2v_inst6
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|single6bitregister:inst15|2to1mux:b2v_inst8
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|60count:inst14
+reset => reset.IN1
+manual => manual.IN1
+board => board.IN1
+S0 <= TFF_inst.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= TFF_inst1.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= SYNTHESIZED_WIRE_33.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= SYNTHESIZED_WIRE_32.DB_MAX_OUTPUT_PORT_TYPE
+S4 <= SYNTHESIZED_WIRE_31.DB_MAX_OUTPUT_PORT_TYPE
+S5 <= TFF_inst12.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|60count:inst14|2to1mux:b2v_inst10
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|60count:inst14|debouncer:b2v_inst19
+Manual => Smooth~reg0.DATAIN
+Board => Board.IN1
+Smooth <= Smooth~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst
+CLK_OUT <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+CLK_IN => inst1.CLK
+CLK_IN => inst2.CLK
+CLK_IN => inst3.CLK
+CLK_IN => inst4.CLK
+CLK_IN => inst5.CLK
+CLK_IN => inst6.CLK
+CLK_IN => inst7.CLK
+CLK_IN => inst8.CLK
+CLK_IN => inst9.CLK
+CLK_IN => inst10.CLK
+
+
+|alarmclockfinal|60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst1
+CLK_OUT <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+CLK_IN => inst1.CLK
+CLK_IN => inst2.CLK
+CLK_IN => inst3.CLK
+CLK_IN => inst4.CLK
+CLK_IN => inst5.CLK
+CLK_IN => inst6.CLK
+CLK_IN => inst7.CLK
+CLK_IN => inst8.CLK
+CLK_IN => inst9.CLK
+CLK_IN => inst10.CLK
+
+
+|alarmclockfinal|2to1mux:inst3
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|2to1mux:inst4
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|2to1mux:inst5
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|2to1mux:inst6
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|2to1mux:inst7
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|seven_seg_decoder:inst20
+x3 => Decoder0.IN0
+x2 => Decoder0.IN1
+x1 => Decoder0.IN2
+x0 => Decoder0.IN3
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|seven_seg_decoder:inst25
+x3 => Decoder0.IN0
+x2 => Decoder0.IN1
+x1 => Decoder0.IN2
+x0 => Decoder0.IN3
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|bcd_converter:inst24
+S0 => N1X0.DATAIN
+S1 => N2X0.IN1
+S1 => N2X0.IN1
+S1 => N1X3.IN1
+S1 => N1X2.IN1
+S1 => N1X1.IN1
+S1 => N1X1.IN1
+S1 => N1X1.IN1
+S1 => N1X3.IN1
+S1 => N1X3.IN1
+S1 => N1X2.IN1
+S1 => N1X1.IN1
+S1 => N1X1.IN1
+S2 => N2X1.IN0
+S2 => N2X0.IN1
+S2 => N2X0.IN0
+S2 => N1X3.IN1
+S2 => N1X2.IN1
+S2 => N1X2.IN0
+S2 => N1X1.IN0
+S2 => N2X0.IN1
+S2 => N1X3.IN1
+S2 => N1X2.IN1
+S2 => N1X2.IN0
+S3 => N2X1.IN0
+S3 => N2X0.IN0
+S3 => N2X0.IN1
+S3 => N2X0.IN0
+S3 => N1X2.IN0
+S3 => N1X1.IN1
+C0 => N2X1.IN1
+C0 => N2X1.IN1
+C0 => N2X0.IN1
+C0 => N1X2.IN1
+C0 => N2X0.IN1
+C0 => N1X2.IN1
+C0 => N1X2.IN1
+N2X3 <= <GND>
+N2X2 <= <GND>
+N2X1 <= N2X1.DB_MAX_OUTPUT_PORT_TYPE
+N2X0 <= N2X0.DB_MAX_OUTPUT_PORT_TYPE
+N1X3 <= N1X3.DB_MAX_OUTPUT_PORT_TYPE
+N1X2 <= N1X2.DB_MAX_OUTPUT_PORT_TYPE
+N1X1 <= N1X1.DB_MAX_OUTPUT_PORT_TYPE
+N1X0 <= S0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|2to1mux:inst9
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|clocknobounce:inst8
+Reset => Reset.IN1
+clock => TFF_inst4.CLK
+clock => SYNTHESIZED_WIRE_17.CLK
+clock => TFF_inst2.CLK
+clock => TFF_inst1.CLK
+clock => TFF_inst.CLK
+S0 <= TFF_inst.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= TFF_inst1.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= TFF_inst2.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= SYNTHESIZED_WIRE_17.DB_MAX_OUTPUT_PORT_TYPE
+S4 <= TFF_inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|clocknobounce:inst8|2to1mux:b2v_mux
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|2to1mux:hrsetmux
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|debouncer:hrsetdebounce
+Manual => Smooth~reg0.DATAIN
+Board => Board.IN1
+Smooth <= Smooth~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|debouncer:hrsetdebounce|clock_divider_1024:b2v_inst
+CLK_OUT <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+CLK_IN => inst1.CLK
+CLK_IN => inst2.CLK
+CLK_IN => inst3.CLK
+CLK_IN => inst4.CLK
+CLK_IN => inst5.CLK
+CLK_IN => inst6.CLK
+CLK_IN => inst7.CLK
+CLK_IN => inst8.CLK
+CLK_IN => inst9.CLK
+CLK_IN => inst10.CLK
+
+
+|alarmclockfinal|debouncer:hrsetdebounce|clock_divider_1024:b2v_inst1
+CLK_OUT <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+CLK_IN => inst1.CLK
+CLK_IN => inst2.CLK
+CLK_IN => inst3.CLK
+CLK_IN => inst4.CLK
+CLK_IN => inst5.CLK
+CLK_IN => inst6.CLK
+CLK_IN => inst7.CLK
+CLK_IN => inst8.CLK
+CLK_IN => inst9.CLK
+CLK_IN => inst10.CLK
+
+
+|alarmclockfinal|single5bitregister:inst23
+Load => Load.IN5
+Clock => DFF_inst9.CLK
+Clock => DFF_inst7.CLK
+Clock => DFF_inst5.CLK
+Clock => DFF_inst11.CLK
+Clock => DFF_inst.CLK
+Reset => DFF_inst11.ACLR
+Reset => DFF_inst9.ACLR
+Reset => DFF_inst7.ACLR
+Reset => DFF_inst5.ACLR
+Reset => DFF_inst.ACLR
+IN0 => IN0.IN1
+IN1 => IN1.IN1
+IN2 => IN2.IN1
+IN3 => IN3.IN1
+IN4 => IN4.IN1
+OUT0 <= DFF_inst11.DB_MAX_OUTPUT_PORT_TYPE
+OUT1 <= DFF_inst9.DB_MAX_OUTPUT_PORT_TYPE
+OUT2 <= DFF_inst7.DB_MAX_OUTPUT_PORT_TYPE
+OUT3 <= DFF_inst5.DB_MAX_OUTPUT_PORT_TYPE
+OUT4 <= DFF_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|single5bitregister:inst23|2to1mux:b2v_inst10
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|single5bitregister:inst23|2to1mux:b2v_inst12
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|single5bitregister:inst23|2to1mux:b2v_inst4
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|single5bitregister:inst23|2to1mux:b2v_inst6
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|single5bitregister:inst23|2to1mux:b2v_inst8
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|fullClock:HrClock
+manual => manual.IN1
+board => board.IN1
+Reset => Reset.IN1
+S0 <= TFF_inst.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= TFF_inst1.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= TFF_inst2.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= SYNTHESIZED_WIRE_22.DB_MAX_OUTPUT_PORT_TYPE
+S4 <= TFF_inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|fullClock:HrClock|debouncer:b2v_inst12
+Manual => Smooth~reg0.DATAIN
+Board => Board.IN1
+Smooth <= Smooth~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|fullClock:HrClock|debouncer:b2v_inst12|clock_divider_1024:b2v_inst
+CLK_OUT <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+CLK_IN => inst1.CLK
+CLK_IN => inst2.CLK
+CLK_IN => inst3.CLK
+CLK_IN => inst4.CLK
+CLK_IN => inst5.CLK
+CLK_IN => inst6.CLK
+CLK_IN => inst7.CLK
+CLK_IN => inst8.CLK
+CLK_IN => inst9.CLK
+CLK_IN => inst10.CLK
+
+
+|alarmclockfinal|fullClock:HrClock|debouncer:b2v_inst12|clock_divider_1024:b2v_inst1
+CLK_OUT <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+CLK_IN => inst1.CLK
+CLK_IN => inst2.CLK
+CLK_IN => inst3.CLK
+CLK_IN => inst4.CLK
+CLK_IN => inst5.CLK
+CLK_IN => inst6.CLK
+CLK_IN => inst7.CLK
+CLK_IN => inst8.CLK
+CLK_IN => inst9.CLK
+CLK_IN => inst10.CLK
+
+
+|alarmclockfinal|fullClock:HrClock|2to1mux:b2v_mux
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|2to1mux:inst10
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|2to1mux:inst11
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|2to1mux:inst12
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|2to1mux:inst13
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|seven_seg_decoder:inst26
+x3 => Decoder0.IN0
+x2 => Decoder0.IN1
+x1 => Decoder0.IN2
+x0 => Decoder0.IN3
+A <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+B <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+D <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+E <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+F <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+G <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|2to1mux:inst39
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|alarmmin:alarm6bit
+Clock0 => SYNTHESIZED_WIRE_0.IN0
+Reg0 => SYNTHESIZED_WIRE_0.IN1
+Clock1 => SYNTHESIZED_WIRE_1.IN0
+Reg1 => SYNTHESIZED_WIRE_1.IN1
+Clock2 => SYNTHESIZED_WIRE_2.IN0
+Reg2 => SYNTHESIZED_WIRE_2.IN1
+Clock3 => SYNTHESIZED_WIRE_3.IN0
+Reg3 => SYNTHESIZED_WIRE_3.IN1
+Clock4 => SYNTHESIZED_WIRE_4.IN0
+Reg4 => SYNTHESIZED_WIRE_4.IN1
+Clock5 => SYNTHESIZED_WIRE_5.IN0
+Reg5 => SYNTHESIZED_WIRE_5.IN1
+Alarm <= Alarm.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alarmclockfinal|alarm:alarm5bit
+Clock0 => SYNTHESIZED_WIRE_0.IN0
+Reg0 => SYNTHESIZED_WIRE_0.IN1
+Clock1 => SYNTHESIZED_WIRE_1.IN0
+Reg1 => SYNTHESIZED_WIRE_1.IN1
+Clock2 => SYNTHESIZED_WIRE_5.IN0
+Reg2 => SYNTHESIZED_WIRE_5.IN1
+Clock3 => SYNTHESIZED_WIRE_2.IN0
+Reg3 => SYNTHESIZED_WIRE_2.IN1
+Clock4 => SYNTHESIZED_WIRE_3.IN0
+Reg4 => SYNTHESIZED_WIRE_3.IN1
+Alarm <= Alarm.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,54 @@
+|60count
+S0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+manual => debouncer:inst19.Manual
+board => debouncer:inst19.Board
+reset => 2to1mux:inst10.S
+S1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+S4 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+S5 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|60count|2to1mux:inst10
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|60count|debouncer:inst19
+Manual => Smooth~reg0.DATAIN
+Board => Board.IN1
+Smooth <= Smooth~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|60count|debouncer:inst19|clock_divider_1024:b2v_inst
+CLK_OUT <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+CLK_IN => inst1.CLK
+CLK_IN => inst2.CLK
+CLK_IN => inst3.CLK
+CLK_IN => inst4.CLK
+CLK_IN => inst5.CLK
+CLK_IN => inst6.CLK
+CLK_IN => inst7.CLK
+CLK_IN => inst8.CLK
+CLK_IN => inst9.CLK
+CLK_IN => inst10.CLK
+
+
+|60count|debouncer:inst19|clock_divider_1024:b2v_inst1
+CLK_OUT <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+CLK_IN => inst1.CLK
+CLK_IN => inst2.CLK
+CLK_IN => inst3.CLK
+CLK_IN => inst4.CLK
+CLK_IN => inst5.CLK
+CLK_IN => inst6.CLK
+CLK_IN => inst7.CLK
+CLK_IN => inst8.CLK
+CLK_IN => inst9.CLK
+CLK_IN => inst10.CLK
+
+

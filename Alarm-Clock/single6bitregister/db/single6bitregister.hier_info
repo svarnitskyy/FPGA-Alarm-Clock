@@ -1,0 +1,81 @@
+|single6bitregister
+OUT5 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Reset => inst.ACLR
+Reset => inst5.ACLR
+Reset => inst7.ACLR
+Reset => inst9.ACLR
+Reset => inst11.ACLR
+Reset => inst1.ACLR
+Clock => inst.CLK
+Clock => inst5.CLK
+Clock => inst7.CLK
+Clock => inst9.CLK
+Clock => inst11.CLK
+Clock => inst1.CLK
+Load => 2to1mux:inst4.S
+Load => 2to1mux:inst6.S
+Load => 2to1mux:inst8.S
+Load => 2to1mux:inst10.S
+Load => 2to1mux:inst12.S
+Load => 2to1mux:inst14.S
+IN5 => 2to1mux:inst4.w1
+OUT4 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+IN4 => 2to1mux:inst6.w1
+OUT3 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+IN3 => 2to1mux:inst8.w1
+OUT2 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+IN2 => 2to1mux:inst10.w1
+OUT1 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+IN1 => 2to1mux:inst12.w1
+OUT0 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+IN0 => 2to1mux:inst14.w1
+
+
+|single6bitregister|2to1mux:inst4
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|single6bitregister|2to1mux:inst6
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|single6bitregister|2to1mux:inst8
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|single6bitregister|2to1mux:inst10
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|single6bitregister|2to1mux:inst12
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|single6bitregister|2to1mux:inst14
+w0 => SYNTHESIZED_WIRE_2.IN0
+S => SYNTHESIZED_WIRE_1.IN0
+S => SYNTHESIZED_WIRE_2.IN1
+w1 => SYNTHESIZED_WIRE_1.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+

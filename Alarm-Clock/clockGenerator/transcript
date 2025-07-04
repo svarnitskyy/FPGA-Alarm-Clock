@@ -1,0 +1,21 @@
+# Compile of clockGenerator.v was successful.
+# Compile of divide_by_2.v was successful.
+# Compile of divide_by_5.v was successful.
+# Compile of divide_by_10.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.clockGenerator work.divide_by_10 work.divide_by_2 work.divide_by_5
+# vsim -gui work.clockGenerator work.divide_by_10 work.divide_by_2 work.divide_by_5 
+# Start time: 15:50:38 on Dec 01,2022
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.clockGenerator(fast)
+# Loading work.divide_by_10(fast)
+# Loading work.divide_by_2(fast)
+# Loading work.divide_by_5(fast)
+add wave -position insertpoint  \
+sim:/clockGenerator/CLRN \
+sim:/clockGenerator/clock_in \
+sim:/clockGenerator/clock_out
+do generator.do
+do generator.do
+# End time: 16:54:43 on Dec 01,2022, Elapsed time: 1:04:05
+# Errors: 0, Warnings: 3

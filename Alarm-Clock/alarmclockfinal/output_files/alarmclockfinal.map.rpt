@@ -1,0 +1,541 @@
+Analysis & Synthesis report for alarmclockfinal
+Fri Apr 21 17:55:06 2023
+Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Port Connectivity Checks: "fullClock:HrClock|2to1mux:b2v_mux"
+ 11. Port Connectivity Checks: "clocknobounce:inst8|2to1mux:b2v_mux"
+ 12. Port Connectivity Checks: "60count:inst14|2to1mux:b2v_inst10"
+ 13. Port Connectivity Checks: "60countnodebounce:inst|2to1mux:b2v_inst10"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Apr 21 17:55:06 2023           ;
+; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Standard Edition ;
+; Revision Name                      ; alarmclockfinal                                 ;
+; Top-level Entity Name              ; alarmclockfinal                                 ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 238                                             ;
+;     Total combinational functions  ; 225                                             ;
+;     Dedicated logic registers      ; 130                                             ;
+; Total registers                    ; 130                                             ;
+; Total pins                         ; 42                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; alarmclockfinal    ; alarmclockfinal    ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                   ; Library ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------+---------+
+; alarmclockfinal.bdf              ; yes             ; User Block Diagram/Schematic File        ; U:/CprE281/finalProject/alarmclockfinal/alarmclockfinal.bdf    ;         ;
+; seven_seg_decoder.v              ; yes             ; Auto-Found Verilog HDL File              ; U:/CprE281/finalProject/alarmclockfinal/seven_seg_decoder.v    ;         ;
+; bcd_converter2.v                 ; yes             ; Auto-Found Verilog HDL File              ; U:/CprE281/finalProject/alarmclockfinal/bcd_converter2.v       ;         ;
+; 2to1mux.v                        ; yes             ; Auto-Found Verilog HDL File              ; U:/CprE281/finalProject/alarmclockfinal/2to1mux.v              ;         ;
+; 60countnodebounce.v              ; yes             ; Auto-Found Verilog HDL File              ; U:/CprE281/finalProject/alarmclockfinal/60countnodebounce.v    ;         ;
+; clockgenerator.v                 ; yes             ; Auto-Found Verilog HDL File              ; U:/CprE281/finalProject/alarmclockfinal/clockgenerator.v       ;         ;
+; divide_by_5.v                    ; yes             ; Auto-Found Verilog HDL File              ; U:/CprE281/finalProject/alarmclockfinal/divide_by_5.v          ;         ;
+; divide_by_10.v                   ; yes             ; Auto-Found Verilog HDL File              ; U:/CprE281/finalProject/alarmclockfinal/divide_by_10.v         ;         ;
+; divide_by_2.v                    ; yes             ; Auto-Found Verilog HDL File              ; U:/CprE281/finalProject/alarmclockfinal/divide_by_2.v          ;         ;
+; debouncer.v                      ; yes             ; Auto-Found Verilog HDL File              ; U:/CprE281/finalProject/alarmclockfinal/debouncer.v            ;         ;
+; clock_divider_1024.bdf           ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/CprE281/finalProject/alarmclockfinal/clock_divider_1024.bdf ;         ;
+; single6bitregister.v             ; yes             ; Auto-Found Verilog HDL File              ; U:/CprE281/finalProject/alarmclockfinal/single6bitregister.v   ;         ;
+; 60count.v                        ; yes             ; Auto-Found Verilog HDL File              ; U:/CprE281/finalProject/alarmclockfinal/60count.v              ;         ;
+; bcd_converter.v                  ; yes             ; Auto-Found Verilog HDL File              ; U:/CprE281/finalProject/alarmclockfinal/bcd_converter.v        ;         ;
+; clocknobounce.v                  ; yes             ; Auto-Found Verilog HDL File              ; U:/CprE281/finalProject/alarmclockfinal/clocknobounce.v        ;         ;
+; single5bitregister.v             ; yes             ; Auto-Found Verilog HDL File              ; U:/CprE281/finalProject/alarmclockfinal/single5bitregister.v   ;         ;
+; fullclock.v                      ; yes             ; Auto-Found Verilog HDL File              ; U:/CprE281/finalProject/alarmclockfinal/fullclock.v            ;         ;
+; alarmmin.v                       ; yes             ; Auto-Found Verilog HDL File              ; U:/CprE281/finalProject/alarmclockfinal/alarmmin.v             ;         ;
+; alarm.v                          ; yes             ; Auto-Found Verilog HDL File              ; U:/CprE281/finalProject/alarmclockfinal/alarm.v                ;         ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 238         ;
+;                                             ;             ;
+; Total combinational functions               ; 225         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 76          ;
+;     -- 3 input functions                    ; 79          ;
+;     -- <=2 input functions                  ; 70          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 225         ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 130         ;
+;     -- Dedicated logic registers            ; 130         ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 42          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; RESET~input ;
+; Maximum fan-out                             ; 34          ;
+; Total fan-out                               ; 1071        ;
+; Average fan-out                             ; 2.44        ;
++---------------------------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                           ;
++-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                  ; Entity Name        ; Library Name ;
++-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------------+--------------+
+; |alarmclockfinal                        ; 225 (3)             ; 130 (1)                   ; 0           ; 0            ; 0       ; 0         ; 42   ; 0            ; |alarmclockfinal                                                                     ; alarmclockfinal    ; work         ;
+;    |2to1mux:hrsetmux|                   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|2to1mux:hrsetmux                                                    ; 2to1mux            ; work         ;
+;    |2to1mux:inst10|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|2to1mux:inst10                                                      ; 2to1mux            ; work         ;
+;    |2to1mux:inst11|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|2to1mux:inst11                                                      ; 2to1mux            ; work         ;
+;    |2to1mux:inst12|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|2to1mux:inst12                                                      ; 2to1mux            ; work         ;
+;    |2to1mux:inst13|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|2to1mux:inst13                                                      ; 2to1mux            ; work         ;
+;    |2to1mux:inst2|                      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|2to1mux:inst2                                                       ; 2to1mux            ; work         ;
+;    |2to1mux:inst33|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|2to1mux:inst33                                                      ; 2to1mux            ; work         ;
+;    |2to1mux:inst39|                     ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|2to1mux:inst39                                                      ; 2to1mux            ; work         ;
+;    |2to1mux:inst3|                      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|2to1mux:inst3                                                       ; 2to1mux            ; work         ;
+;    |2to1mux:inst4|                      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|2to1mux:inst4                                                       ; 2to1mux            ; work         ;
+;    |2to1mux:inst5|                      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|2to1mux:inst5                                                       ; 2to1mux            ; work         ;
+;    |2to1mux:inst6|                      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|2to1mux:inst6                                                       ; 2to1mux            ; work         ;
+;    |2to1mux:inst7|                      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|2to1mux:inst7                                                       ; 2to1mux            ; work         ;
+;    |2to1mux:inst9|                      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|2to1mux:inst9                                                       ; 2to1mux            ; work         ;
+;    |60count:inst14|                     ; 30 (8)              ; 25 (6)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|60count:inst14                                                      ; 60count            ; work         ;
+;       |2to1mux:b2v_inst10|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|60count:inst14|2to1mux:b2v_inst10                                   ; 2to1mux            ; work         ;
+;       |debouncer:b2v_inst19|            ; 21 (0)              ; 19 (1)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|60count:inst14|debouncer:b2v_inst19                                 ; debouncer          ; work         ;
+;          |clock_divider_1024:b2v_inst1| ; 13 (13)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst1    ; clock_divider_1024 ; work         ;
+;          |clock_divider_1024:b2v_inst|  ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst     ; clock_divider_1024 ; work         ;
+;    |60countnodebounce:inst28|           ; 9 (8)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|60countnodebounce:inst28                                            ; 60countnodebounce  ; work         ;
+;       |2to1mux:b2v_inst10|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|60countnodebounce:inst28|2to1mux:b2v_inst10                         ; 2to1mux            ; work         ;
+;    |60countnodebounce:inst|             ; 10 (8)              ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|60countnodebounce:inst                                              ; 60countnodebounce  ; work         ;
+;       |2to1mux:b2v_inst10|              ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|60countnodebounce:inst|2to1mux:b2v_inst10                           ; 2to1mux            ; work         ;
+;    |bcd_converter2:inst18|              ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|bcd_converter2:inst18                                               ; bcd_converter2     ; work         ;
+;    |bcd_converter:inst24|               ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|bcd_converter:inst24                                                ; bcd_converter      ; work         ;
+;    |clockGenerator:inst1|               ; 50 (1)              ; 33 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1                                                ; clockGenerator     ; work         ;
+;       |divide_by_10:b2v_inst1|          ; 6 (0)               ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst1                         ; divide_by_10       ; work         ;
+;          |divide_by_2:b2v_div2|         ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst1|divide_by_2:b2v_div2    ; divide_by_2        ; work         ;
+;          |divide_by_5:b2v_div5|         ; 5 (5)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst1|divide_by_5:b2v_div5    ; divide_by_5        ; work         ;
+;       |divide_by_10:b2v_inst2|          ; 6 (0)               ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst2                         ; divide_by_10       ; work         ;
+;          |divide_by_2:b2v_div2|         ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst2|divide_by_2:b2v_div2    ; divide_by_2        ; work         ;
+;          |divide_by_5:b2v_div5|         ; 5 (5)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst2|divide_by_5:b2v_div5    ; divide_by_5        ; work         ;
+;       |divide_by_10:b2v_inst3|          ; 6 (0)               ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst3                         ; divide_by_10       ; work         ;
+;          |divide_by_2:b2v_div2|         ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst3|divide_by_2:b2v_div2    ; divide_by_2        ; work         ;
+;          |divide_by_5:b2v_div5|         ; 5 (5)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst3|divide_by_5:b2v_div5    ; divide_by_5        ; work         ;
+;       |divide_by_10:b2v_inst4|          ; 6 (0)               ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst4                         ; divide_by_10       ; work         ;
+;          |divide_by_2:b2v_div2|         ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst4|divide_by_2:b2v_div2    ; divide_by_2        ; work         ;
+;          |divide_by_5:b2v_div5|         ; 5 (5)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst4|divide_by_5:b2v_div5    ; divide_by_5        ; work         ;
+;       |divide_by_10:b2v_inst5|          ; 6 (0)               ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst5                         ; divide_by_10       ; work         ;
+;          |divide_by_2:b2v_div2|         ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst5|divide_by_2:b2v_div2    ; divide_by_2        ; work         ;
+;          |divide_by_5:b2v_div5|         ; 5 (5)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst5|divide_by_5:b2v_div5    ; divide_by_5        ; work         ;
+;       |divide_by_10:b2v_inst7|          ; 6 (0)               ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst7                         ; divide_by_10       ; work         ;
+;          |divide_by_2:b2v_div2|         ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst7|divide_by_2:b2v_div2    ; divide_by_2        ; work         ;
+;          |divide_by_5:b2v_div5|         ; 5 (5)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_inst7|divide_by_5:b2v_div5    ; divide_by_5        ; work         ;
+;       |divide_by_10:b2v_int6|           ; 6 (0)               ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_int6                          ; divide_by_10       ; work         ;
+;          |divide_by_2:b2v_div2|         ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_int6|divide_by_2:b2v_div2     ; divide_by_2        ; work         ;
+;          |divide_by_5:b2v_div5|         ; 5 (5)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_10:b2v_int6|divide_by_5:b2v_div5     ; divide_by_5        ; work         ;
+;       |divide_by_2:b2v_inst12|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_2:b2v_inst12                         ; divide_by_2        ; work         ;
+;       |divide_by_2:b2v_inst13|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_2:b2v_inst13                         ; divide_by_2        ; work         ;
+;       |divide_by_5:b2v_inst|            ; 5 (5)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clockGenerator:inst1|divide_by_5:b2v_inst                           ; divide_by_5        ; work         ;
+;    |clocknobounce:inst8|                ; 7 (6)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clocknobounce:inst8                                                 ; clocknobounce      ; work         ;
+;       |2to1mux:b2v_mux|                 ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|clocknobounce:inst8|2to1mux:b2v_mux                                 ; 2to1mux            ; work         ;
+;    |debouncer:hrsetdebounce|            ; 14 (0)              ; 12 (1)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|debouncer:hrsetdebounce                                             ; debouncer          ; work         ;
+;       |clock_divider_1024:b2v_inst1|    ; 13 (13)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|debouncer:hrsetdebounce|clock_divider_1024:b2v_inst1                ; clock_divider_1024 ; work         ;
+;       |clock_divider_1024:b2v_inst|     ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|debouncer:hrsetdebounce|clock_divider_1024:b2v_inst                 ; clock_divider_1024 ; work         ;
+;    |debouncer:inst32|                   ; 17 (0)              ; 12 (1)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|debouncer:inst32                                                    ; debouncer          ; work         ;
+;       |clock_divider_1024:b2v_inst1|    ; 12 (12)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|debouncer:inst32|clock_divider_1024:b2v_inst1                       ; clock_divider_1024 ; work         ;
+;       |clock_divider_1024:b2v_inst|     ; 5 (5)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|debouncer:inst32|clock_divider_1024:b2v_inst                        ; clock_divider_1024 ; work         ;
+;    |fullClock:HrClock|                  ; 23 (6)              ; 19 (5)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|fullClock:HrClock                                                   ; fullClock          ; work         ;
+;       |2to1mux:b2v_mux|                 ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|fullClock:HrClock|2to1mux:b2v_mux                                   ; 2to1mux            ; work         ;
+;       |debouncer:b2v_inst12|            ; 16 (0)              ; 14 (1)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|fullClock:HrClock|debouncer:b2v_inst12                              ; debouncer          ; work         ;
+;          |clock_divider_1024:b2v_inst1| ; 13 (13)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|fullClock:HrClock|debouncer:b2v_inst12|clock_divider_1024:b2v_inst1 ; clock_divider_1024 ; work         ;
+;          |clock_divider_1024:b2v_inst|  ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|fullClock:HrClock|debouncer:b2v_inst12|clock_divider_1024:b2v_inst  ; clock_divider_1024 ; work         ;
+;    |seven_seg_decoder:inst19|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|seven_seg_decoder:inst19                                            ; seven_seg_decoder  ; work         ;
+;    |seven_seg_decoder:inst20|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|seven_seg_decoder:inst20                                            ; seven_seg_decoder  ; work         ;
+;    |seven_seg_decoder:inst25|           ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|seven_seg_decoder:inst25                                            ; seven_seg_decoder  ; work         ;
+;    |seven_seg_decoder:inst26|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|seven_seg_decoder:inst26                                            ; seven_seg_decoder  ; work         ;
+;    |single5bitregister:inst23|          ; 0 (0)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|single5bitregister:inst23                                           ; single5bitregister ; work         ;
+;    |single6bitregister:inst15|          ; 0 (0)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alarmclockfinal|single6bitregister:inst15                                           ; single6bitregister ; work         ;
++-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                              ;
++--------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
+; Register name                                                            ; Reason for Removal                                                                   ;
++--------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
+; debouncer:hrsetdebounce|clock_divider_1024:b2v_inst|inst1                ; Merged with fullClock:HrClock|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst1 ;
+; debouncer:inst32|clock_divider_1024:b2v_inst|inst1                       ; Merged with fullClock:HrClock|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst1 ;
+; 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst1    ; Merged with fullClock:HrClock|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst1 ;
+; 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst2    ; Merged with fullClock:HrClock|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst2 ;
+; debouncer:hrsetdebounce|clock_divider_1024:b2v_inst|inst2                ; Merged with fullClock:HrClock|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst2 ;
+; debouncer:inst32|clock_divider_1024:b2v_inst|inst2                       ; Merged with fullClock:HrClock|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst2 ;
+; debouncer:hrsetdebounce|clock_divider_1024:b2v_inst|inst3                ; Merged with 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst3    ;
+; debouncer:inst32|clock_divider_1024:b2v_inst|inst3                       ; Merged with 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst3    ;
+; fullClock:HrClock|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst3 ; Merged with 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst3    ;
+; debouncer:hrsetdebounce|clock_divider_1024:b2v_inst|inst4                ; Merged with 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst4    ;
+; debouncer:inst32|clock_divider_1024:b2v_inst|inst4                       ; Merged with 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst4    ;
+; fullClock:HrClock|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst4 ; Merged with 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst4    ;
+; debouncer:hrsetdebounce|clock_divider_1024:b2v_inst|inst5                ; Merged with 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst5    ;
+; debouncer:inst32|clock_divider_1024:b2v_inst|inst5                       ; Merged with 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst5    ;
+; fullClock:HrClock|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst5 ; Merged with 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst5    ;
+; debouncer:hrsetdebounce|clock_divider_1024:b2v_inst|inst6                ; Merged with 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst6    ;
+; debouncer:inst32|clock_divider_1024:b2v_inst|inst6                       ; Merged with 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst6    ;
+; fullClock:HrClock|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst6 ; Merged with 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst6    ;
+; debouncer:hrsetdebounce|clock_divider_1024:b2v_inst|inst7                ; Merged with 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst7    ;
+; debouncer:inst32|clock_divider_1024:b2v_inst|inst7                       ; Merged with 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst7    ;
+; fullClock:HrClock|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst7 ; Merged with 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst7    ;
+; debouncer:hrsetdebounce|clock_divider_1024:b2v_inst|inst8                ; Merged with 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst8    ;
+; debouncer:inst32|clock_divider_1024:b2v_inst|inst8                       ; Merged with 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst8    ;
+; fullClock:HrClock|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst8 ; Merged with 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst8    ;
+; debouncer:hrsetdebounce|clock_divider_1024:b2v_inst|inst9                ; Merged with 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst9    ;
+; debouncer:inst32|clock_divider_1024:b2v_inst|inst9                       ; Merged with 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst9    ;
+; fullClock:HrClock|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst9 ; Merged with 60count:inst14|debouncer:b2v_inst19|clock_divider_1024:b2v_inst|inst9    ;
+; Total Number of Removed Registers = 27                                   ;                                                                                      ;
++--------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 130   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 73    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 14    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "fullClock:HrClock|2to1mux:b2v_mux" ;
++------+-------+----------+-------------------------------------+
+; Port ; Type  ; Severity ; Details                             ;
++------+-------+----------+-------------------------------------+
+; w1   ; Input ; Info     ; Stuck at VCC                        ;
++------+-------+----------+-------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "clocknobounce:inst8|2to1mux:b2v_mux" ;
++------+-------+----------+---------------------------------------+
+; Port ; Type  ; Severity ; Details                               ;
++------+-------+----------+---------------------------------------+
+; w1   ; Input ; Info     ; Stuck at VCC                          ;
++------+-------+----------+---------------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "60count:inst14|2to1mux:b2v_inst10" ;
++------+-------+----------+-------------------------------------+
+; Port ; Type  ; Severity ; Details                             ;
++------+-------+----------+-------------------------------------+
+; w1   ; Input ; Info     ; Stuck at VCC                        ;
++------+-------+----------+-------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "60countnodebounce:inst|2to1mux:b2v_inst10" ;
++------+-------+----------+---------------------------------------------+
+; Port ; Type  ; Severity ; Details                                     ;
++------+-------+----------+---------------------------------------------+
+; w1   ; Input ; Info     ; Stuck at VCC                                ;
++------+-------+----------+---------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 42                          ;
+; cycloneiii_ff         ; 130                         ;
+;     CLR               ; 62                          ;
+;     ENA               ; 3                           ;
+;     ENA CLR           ; 11                          ;
+;     plain             ; 54                          ;
+; cycloneiii_lcell_comb ; 229                         ;
+;     normal            ; 229                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 34                          ;
+;         2 data inputs ; 39                          ;
+;         3 data inputs ; 79                          ;
+;         4 data inputs ; 76                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.10                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 21.1.1 Build 850 06/23/2022 SJ Standard Edition
+    Info: Processing started: Fri Apr 21 17:54:52 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alarmclockfinal -c alarmclockfinal
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file alarmclockfinal.bdf
+    Info (12023): Found entity 1: alarmclockfinal
+Info (12127): Elaborating entity "alarmclockfinal" for the top level hierarchy
+Warning (12125): Using design file seven_seg_decoder.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: seven_seg_decoder File: U:/CprE281/finalProject/alarmclockfinal/seven_seg_decoder.v Line: 1
+Info (12128): Elaborating entity "seven_seg_decoder" for hierarchy "seven_seg_decoder:inst19"
+Warning (12125): Using design file bcd_converter2.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: bcd_converter2 File: U:/CprE281/finalProject/alarmclockfinal/bcd_converter2.v Line: 1
+Info (12128): Elaborating entity "bcd_converter2" for hierarchy "bcd_converter2:inst18"
+Warning (12125): Using design file 2to1mux.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: 2to1mux File: U:/CprE281/finalProject/alarmclockfinal/2to1mux.v Line: 20
+Warning (12300): Found the following files while searching for definition of entity "2to1mux", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: 2to1mux.bdf
+Info (12128): Elaborating entity "2to1mux" for hierarchy "2to1mux:inst2"
+Warning (12125): Using design file 60countnodebounce.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: 60countnodebounce File: U:/CprE281/finalProject/alarmclockfinal/60countnodebounce.v Line: 20
+Warning (12300): Found the following files while searching for definition of entity "60countnodebounce", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: 60countnodebounce.bdf
+Info (12128): Elaborating entity "60countnodebounce" for hierarchy "60countnodebounce:inst"
+Warning (12125): Using design file clockgenerator.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: clockGenerator File: U:/CprE281/finalProject/alarmclockfinal/clockgenerator.v Line: 20
+Warning (12300): Found the following files while searching for definition of entity "clockGenerator", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: clockGenerator.bdf
+Info (12128): Elaborating entity "clockGenerator" for hierarchy "clockGenerator:inst1"
+Warning (12125): Using design file divide_by_5.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: divide_by_5 File: U:/CprE281/finalProject/alarmclockfinal/divide_by_5.v Line: 20
+Warning (12300): Found the following files while searching for definition of entity "divide_by_5", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: divide_by_5.bdf
+Info (12128): Elaborating entity "divide_by_5" for hierarchy "clockGenerator:inst1|divide_by_5:b2v_inst" File: U:/CprE281/finalProject/alarmclockfinal/clockgenerator.v Line: 49
+Warning (12125): Using design file divide_by_10.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: divide_by_10 File: U:/CprE281/finalProject/alarmclockfinal/divide_by_10.v Line: 20
+Warning (12300): Found the following files while searching for definition of entity "divide_by_10", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: divide_by_10.bdf
+Info (12128): Elaborating entity "divide_by_10" for hierarchy "clockGenerator:inst1|divide_by_10:b2v_inst1" File: U:/CprE281/finalProject/alarmclockfinal/clockgenerator.v Line: 55
+Warning (12125): Using design file divide_by_2.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: divide_by_2 File: U:/CprE281/finalProject/alarmclockfinal/divide_by_2.v Line: 20
+Warning (12300): Found the following files while searching for definition of entity "divide_by_2", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: divide_by_2.bdf
+Info (12128): Elaborating entity "divide_by_2" for hierarchy "clockGenerator:inst1|divide_by_10:b2v_inst1|divide_by_2:b2v_div2" File: U:/CprE281/finalProject/alarmclockfinal/divide_by_10.v Line: 40
+Warning (12125): Using design file debouncer.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: debouncer File: U:/CprE281/finalProject/alarmclockfinal/debouncer.v Line: 20
+Warning (12300): Found the following files while searching for definition of entity "debouncer", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: debouncer.bdf
+Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:inst32"
+Warning (12125): Using design file clock_divider_1024.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: clock_divider_1024
+Info (12128): Elaborating entity "clock_divider_1024" for hierarchy "debouncer:inst32|clock_divider_1024:b2v_inst" File: U:/CprE281/finalProject/alarmclockfinal/debouncer.v Line: 42
+Warning (12125): Using design file single6bitregister.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: single6bitregister File: U:/CprE281/finalProject/alarmclockfinal/single6bitregister.v Line: 20
+Warning (12300): Found the following files while searching for definition of entity "single6bitregister", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: single6bitregister.bdf
+Info (12128): Elaborating entity "single6bitregister" for hierarchy "single6bitregister:inst15"
+Warning (12125): Using design file 60count.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: 60count File: U:/CprE281/finalProject/alarmclockfinal/60count.v Line: 20
+Warning (12300): Found the following files while searching for definition of entity "60count", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: 60count.bdf
+Info (12128): Elaborating entity "60count" for hierarchy "60count:inst14"
+Warning (12125): Using design file bcd_converter.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: bcd_converter File: U:/CprE281/finalProject/alarmclockfinal/bcd_converter.v Line: 1
+Info (12128): Elaborating entity "bcd_converter" for hierarchy "bcd_converter:inst24"
+Warning (12125): Using design file clocknobounce.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: clocknobounce File: U:/CprE281/finalProject/alarmclockfinal/clocknobounce.v Line: 20
+Warning (12300): Found the following files while searching for definition of entity "clocknobounce", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: clocknobounce.bdf
+Info (12128): Elaborating entity "clocknobounce" for hierarchy "clocknobounce:inst8"
+Warning (12125): Using design file single5bitregister.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: single5bitregister File: U:/CprE281/finalProject/alarmclockfinal/single5bitregister.v Line: 20
+Warning (12300): Found the following files while searching for definition of entity "single5bitregister", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: single5bitregister.bdf
+Info (12128): Elaborating entity "single5bitregister" for hierarchy "single5bitregister:inst23"
+Warning (12125): Using design file fullclock.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: fullClock File: U:/CprE281/finalProject/alarmclockfinal/fullclock.v Line: 20
+Info (12128): Elaborating entity "fullClock" for hierarchy "fullClock:HrClock"
+Warning (12125): Using design file alarmmin.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: alarmmin File: U:/CprE281/finalProject/alarmclockfinal/alarmmin.v Line: 20
+Warning (12300): Found the following files while searching for definition of entity "alarmmin", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: alarmmin.bdf
+Info (12128): Elaborating entity "alarmmin" for hierarchy "alarmmin:alarm6bit"
+Warning (12125): Using design file alarm.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: alarm File: U:/CprE281/finalProject/alarmclockfinal/alarm.v Line: 20
+Warning (12300): Found the following files while searching for definition of entity "alarm", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: alarm.bdf
+Info (12128): Elaborating entity "alarm" for hierarchy "alarm:alarm5bit"
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer 2to1mux:inst33|out~0 File: U:/CprE281/finalProject/alarmclockfinal/2to1mux.v Line: 31
+    Warning (19017): Found clock multiplexer 2to1mux:hrsetmux|out~0 File: U:/CprE281/finalProject/alarmclockfinal/2to1mux.v Line: 31
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HrL1" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 280 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 238 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 50 warnings
+    Info: Peak virtual memory: 4826 megabytes
+    Info: Processing ended: Fri Apr 21 17:55:06 2023
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:15
+
+

@@ -1,0 +1,173 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "MinL0",
+					"strict" : false
+				},
+				{
+					"name" : "MinL1",
+					"strict" : false
+				},
+				{
+					"name" : "MinL2",
+					"strict" : false
+				},
+				{
+					"name" : "MinL3",
+					"strict" : false
+				},
+				{
+					"name" : "MinL4",
+					"strict" : false
+				},
+				{
+					"name" : "MinL5",
+					"strict" : false
+				},
+				{
+					"name" : "MinL6",
+					"strict" : false
+				},
+				{
+					"name" : "MinR0",
+					"strict" : false
+				},
+				{
+					"name" : "MInR1",
+					"strict" : false
+				},
+				{
+					"name" : "MinR2",
+					"strict" : false
+				},
+				{
+					"name" : "MinR3",
+					"strict" : false
+				},
+				{
+					"name" : "MinR4",
+					"strict" : false
+				},
+				{
+					"name" : "MinR5",
+					"strict" : false
+				},
+				{
+					"name" : "MinR6",
+					"strict" : false
+				},
+				{
+					"name" : "HrL0",
+					"strict" : false
+				},
+				{
+					"name" : "HrL2",
+					"strict" : false
+				},
+				{
+					"name" : "HrL3",
+					"strict" : false
+				},
+				{
+					"name" : "HrL4",
+					"strict" : false
+				},
+				{
+					"name" : "HrL5",
+					"strict" : false
+				},
+				{
+					"name" : "HrL6",
+					"strict" : false
+				},
+				{
+					"name" : "HrR0",
+					"strict" : false
+				},
+				{
+					"name" : "HrR1",
+					"strict" : false
+				},
+				{
+					"name" : "HrR2",
+					"strict" : false
+				},
+				{
+					"name" : "HrR3",
+					"strict" : false
+				},
+				{
+					"name" : "HrR4",
+					"strict" : false
+				},
+				{
+					"name" : "HrR5",
+					"strict" : false
+				},
+				{
+					"name" : "HrR6",
+					"strict" : false
+				},
+				{
+					"name" : "secondBlinker",
+					"strict" : false
+				},
+				{
+					"name" : "Alarm0",
+					"strict" : false
+				},
+				{
+					"name" : "Alarm1",
+					"strict" : false
+				},
+				{
+					"name" : "Alarm2",
+					"strict" : false
+				},
+				{
+					"name" : "Alarm3",
+					"strict" : false
+				},
+				{
+					"name" : "alarmWrite",
+					"strict" : false
+				},
+				{
+					"name" : "AlarmOn/Off",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "RESET",
+					"strict" : false
+				},
+				{
+					"name" : "ClockSet",
+					"strict" : false
+				},
+				{
+					"name" : "alarmMinIncrement",
+					"strict" : false
+				},
+				{
+					"name" : "MinSet",
+					"strict" : false
+				},
+				{
+					"name" : "alarmHrIncrement",
+					"strict" : false
+				},
+				{
+					"name" : "HrSet",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

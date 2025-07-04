@@ -1,0 +1,53 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Alarm",
+					"strict" : false
+				},
+				{
+					"name" : "Clock0",
+					"strict" : false
+				},
+				{
+					"name" : "Clock1",
+					"strict" : false
+				},
+				{
+					"name" : "Reg1",
+					"strict" : false
+				},
+				{
+					"name" : "Reg0",
+					"strict" : false
+				},
+				{
+					"name" : "Clock2",
+					"strict" : false
+				},
+				{
+					"name" : "Clock3",
+					"strict" : false
+				},
+				{
+					"name" : "Reg3",
+					"strict" : false
+				},
+				{
+					"name" : "Reg2",
+					"strict" : false
+				},
+				{
+					"name" : "Clock4",
+					"strict" : false
+				},
+				{
+					"name" : "Reg4",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

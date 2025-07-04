@@ -1,0 +1,77 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Lm0",
+					"strict" : false
+				},
+				{
+					"name" : "Lm2",
+					"strict" : false
+				},
+				{
+					"name" : "Lm3",
+					"strict" : false
+				},
+				{
+					"name" : "Lm4",
+					"strict" : false
+				},
+				{
+					"name" : "Lm6",
+					"strict" : false
+				},
+				{
+					"name" : "Lm5",
+					"strict" : false
+				},
+				{
+					"name" : "Rm0",
+					"strict" : false
+				},
+				{
+					"name" : "Rm1",
+					"strict" : false
+				},
+				{
+					"name" : "Rm2",
+					"strict" : false
+				},
+				{
+					"name" : "Rm3",
+					"strict" : false
+				},
+				{
+					"name" : "Rm4",
+					"strict" : false
+				},
+				{
+					"name" : "Rm5",
+					"strict" : false
+				},
+				{
+					"name" : "Rm6",
+					"strict" : false
+				},
+				{
+					"name" : "Load",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				},
+				{
+					"name" : "Reset",
+					"strict" : false
+				},
+				{
+					"name" : "Manual",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

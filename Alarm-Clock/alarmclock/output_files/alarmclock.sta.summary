@@ -1,0 +1,941 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'Clock'
+Slack : -2.511
+TNS   : -12.642
+
+Type  : Slow 1200mV 85C Model Setup 'fullClock:inst10|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst10'
+Slack : -2.290
+TNS   : -7.005
+
+Type  : Slow 1200mV 85C Model Setup 'fullClock:inst10|debouncer:b2v_inst12|Smooth'
+Slack : -1.053
+TNS   : -3.300
+
+Type  : Slow 1200mV 85C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.036
+TNS   : -2.038
+
+Type  : Slow 1200mV 85C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.027
+TNS   : -1.864
+
+Type  : Slow 1200mV 85C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.905
+TNS   : -2.013
+
+Type  : Slow 1200mV 85C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.852
+TNS   : -1.881
+
+Type  : Slow 1200mV 85C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.843
+TNS   : -1.934
+
+Type  : Slow 1200mV 85C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.842
+TNS   : -1.881
+
+Type  : Slow 1200mV 85C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.731
+TNS   : -1.689
+
+Type  : Slow 1200mV 85C Model Setup 'clockGenerator:clcok24|divide_by_2:b2v_inst12|divide_by_2'
+Slack : -0.722
+TNS   : -1.215
+
+Type  : Slow 1200mV 85C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -0.385
+TNS   : -0.385
+
+Type  : Slow 1200mV 85C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -0.295
+TNS   : -0.295
+
+Type  : Slow 1200mV 85C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -0.293
+TNS   : -0.293
+
+Type  : Slow 1200mV 85C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -0.250
+TNS   : -0.250
+
+Type  : Slow 1200mV 85C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -0.218
+TNS   : -0.218
+
+Type  : Slow 1200mV 85C Model Setup 'clockGenerator:clcok24|divide_by_5:b2v_inst|SYNTHESIZED_WIRE_10'
+Slack : -0.140
+TNS   : -0.140
+
+Type  : Slow 1200mV 85C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -0.125
+TNS   : -0.125
+
+Type  : Slow 1200mV 85C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.241
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -0.210
+TNS   : -0.210
+
+Type  : Slow 1200mV 85C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.089
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.256
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clockGenerator:clcok24|divide_by_5:b2v_inst|SYNTHESIZED_WIRE_10'
+Slack : 0.272
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.273
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.329
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.330
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.330
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.339
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.345
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.364
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'fullClock:inst10|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst10'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Clock'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clockGenerator:clcok24|divide_by_2:b2v_inst12|divide_by_2'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.421
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.495
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.504
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'fullClock:inst10|debouncer:b2v_inst12|Smooth'
+Slack : 0.919
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'Clock'
+Slack : -1.753
+TNS   : -5.190
+
+Type  : Slow 1200mV 85C Model Recovery 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.106
+TNS   : -3.314
+
+Type  : Slow 1200mV 85C Model Recovery 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.103
+TNS   : -3.304
+
+Type  : Slow 1200mV 85C Model Recovery 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.100
+TNS   : -3.296
+
+Type  : Slow 1200mV 85C Model Recovery 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.082
+TNS   : -3.241
+
+Type  : Slow 1200mV 85C Model Recovery 'clockGenerator:clcok24|divide_by_2:b2v_inst12|divide_by_2'
+Slack : -1.005
+TNS   : -5.025
+
+Type  : Slow 1200mV 85C Model Recovery 'fullClock:inst10|debouncer:b2v_inst12|Smooth'
+Slack : -0.971
+TNS   : -4.855
+
+Type  : Slow 1200mV 85C Model Recovery 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.953
+TNS   : -2.854
+
+Type  : Slow 1200mV 85C Model Recovery 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.950
+TNS   : -2.844
+
+Type  : Slow 1200mV 85C Model Recovery 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.937
+TNS   : -2.806
+
+Type  : Slow 1200mV 85C Model Removal 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.390
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.414
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.442
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.446
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.461
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.585
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.637
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'Clock'
+Slack : 1.239
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clockGenerator:clcok24|divide_by_2:b2v_inst12|divide_by_2'
+Slack : 1.373
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'fullClock:inst10|debouncer:b2v_inst12|Smooth'
+Slack : 1.447
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clock'
+Slack : -3.000
+TNS   : -26.130
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'fullClock:inst10|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst10'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_2:b2v_inst12|divide_by_2'
+Slack : -1.285
+TNS   : -7.710
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'fullClock:inst10|debouncer:b2v_inst12|Smooth'
+Slack : -1.285
+TNS   : -6.425
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_5:b2v_inst|SYNTHESIZED_WIRE_10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'fullClock:inst10|debouncer:b2v_inst12|clock_divider_1024:b2v_inst1|inst10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Setup 'Clock'
+Slack : -2.219
+TNS   : -9.831
+
+Type  : Slow 1200mV 0C Model Setup 'fullClock:inst10|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst10'
+Slack : -2.013
+TNS   : -5.502
+
+Type  : Slow 1200mV 0C Model Setup 'fullClock:inst10|debouncer:b2v_inst12|Smooth'
+Slack : -0.839
+TNS   : -2.476
+
+Type  : Slow 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.817
+TNS   : -1.599
+
+Type  : Slow 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.810
+TNS   : -1.452
+
+Type  : Slow 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.712
+TNS   : -1.583
+
+Type  : Slow 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.660
+TNS   : -1.453
+
+Type  : Slow 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.648
+TNS   : -1.507
+
+Type  : Slow 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.646
+TNS   : -1.443
+
+Type  : Slow 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.565
+TNS   : -1.318
+
+Type  : Slow 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_2:b2v_inst12|divide_by_2'
+Slack : -0.540
+TNS   : -0.716
+
+Type  : Slow 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -0.287
+TNS   : -0.287
+
+Type  : Slow 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -0.203
+TNS   : -0.203
+
+Type  : Slow 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -0.191
+TNS   : -0.191
+
+Type  : Slow 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -0.161
+TNS   : -0.161
+
+Type  : Slow 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -0.117
+TNS   : -0.117
+
+Type  : Slow 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_5:b2v_inst|SYNTHESIZED_WIRE_10'
+Slack : -0.079
+TNS   : -0.079
+
+Type  : Slow 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -0.055
+TNS   : -0.055
+
+Type  : Slow 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.278
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -0.209
+TNS   : -0.209
+
+Type  : Slow 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.076
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.224
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.232
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_5:b2v_inst|SYNTHESIZED_WIRE_10'
+Slack : 0.243
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.280
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.281
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.283
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.284
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.287
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.287
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.317
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Clock'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'fullClock:inst10|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst10'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_2:b2v_inst12|divide_by_2'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.368
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.446
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'fullClock:inst10|debouncer:b2v_inst12|Smooth'
+Slack : 0.829
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'Clock'
+Slack : -1.514
+TNS   : -4.508
+
+Type  : Slow 1200mV 0C Model Recovery 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.898
+TNS   : -2.689
+
+Type  : Slow 1200mV 0C Model Recovery 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.895
+TNS   : -2.679
+
+Type  : Slow 1200mV 0C Model Recovery 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.890
+TNS   : -2.666
+
+Type  : Slow 1200mV 0C Model Recovery 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.885
+TNS   : -2.650
+
+Type  : Slow 1200mV 0C Model Recovery 'clockGenerator:clcok24|divide_by_2:b2v_inst12|divide_by_2'
+Slack : -0.813
+TNS   : -4.065
+
+Type  : Slow 1200mV 0C Model Recovery 'fullClock:inst10|debouncer:b2v_inst12|Smooth'
+Slack : -0.781
+TNS   : -3.905
+
+Type  : Slow 1200mV 0C Model Recovery 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.755
+TNS   : -2.260
+
+Type  : Slow 1200mV 0C Model Recovery 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.752
+TNS   : -2.252
+
+Type  : Slow 1200mV 0C Model Recovery 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.742
+TNS   : -2.222
+
+Type  : Slow 1200mV 0C Model Removal 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.345
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.367
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.409
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.420
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.534
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.591
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'Clock'
+Slack : 1.219
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clockGenerator:clcok24|divide_by_2:b2v_inst12|divide_by_2'
+Slack : 1.246
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'fullClock:inst10|debouncer:b2v_inst12|Smooth'
+Slack : 1.311
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clock'
+Slack : -3.000
+TNS   : -26.130
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'fullClock:inst10|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst10'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_2:b2v_inst12|divide_by_2'
+Slack : -1.285
+TNS   : -7.710
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'fullClock:inst10|debouncer:b2v_inst12|Smooth'
+Slack : -1.285
+TNS   : -6.425
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.285
+TNS   : -3.855
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_5:b2v_inst|SYNTHESIZED_WIRE_10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'fullClock:inst10|debouncer:b2v_inst12|clock_divider_1024:b2v_inst1|inst10'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Fast 1200mV 0C Model Setup 'Clock'
+Slack : -0.726
+TNS   : -1.593
+
+Type  : Fast 1200mV 0C Model Setup 'fullClock:inst10|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst10'
+Slack : -0.628
+TNS   : -0.633
+
+Type  : Fast 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.110
+TNS   : -0.145
+
+Type  : Fast 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.061
+TNS   : -0.061
+
+Type  : Fast 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.044
+TNS   : -0.044
+
+Type  : Fast 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.035
+TNS   : -0.035
+
+Type  : Fast 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.034
+TNS   : -0.044
+
+Type  : Fast 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.029
+TNS   : -0.029
+
+Type  : Fast 1200mV 0C Model Setup 'fullClock:inst10|debouncer:b2v_inst12|Smooth'
+Slack : -0.013
+TNS   : -0.013
+
+Type  : Fast 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.012
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.066
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.066
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.073
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.110
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.127
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_2:b2v_inst12|divide_by_2'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_5:b2v_inst|SYNTHESIZED_WIRE_10'
+Slack : 0.180
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.195
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -0.095
+TNS   : -0.095
+
+Type  : Fast 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.029
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.131
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_5:b2v_inst|SYNTHESIZED_WIRE_10'
+Slack : 0.133
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.139
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.142
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.154
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.168
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.176
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Clock'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'fullClock:inst10|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst10'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_2:b2v_inst12|divide_by_2'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.202
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.219
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.219
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : 0.239
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'fullClock:inst10|debouncer:b2v_inst12|Smooth'
+Slack : 0.417
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'Clock'
+Slack : -0.540
+TNS   : -1.574
+
+Type  : Fast 1200mV 0C Model Recovery 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.036
+TNS   : -0.106
+
+Type  : Fast 1200mV 0C Model Recovery 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.033
+TNS   : -0.097
+
+Type  : Fast 1200mV 0C Model Recovery 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.033
+TNS   : -0.097
+
+Type  : Fast 1200mV 0C Model Recovery 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_2:b2v_div2|divide_by_2'
+Slack : -0.032
+TNS   : -0.094
+
+Type  : Fast 1200mV 0C Model Recovery 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.006
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'clockGenerator:clcok24|divide_by_2:b2v_inst12|divide_by_2'
+Slack : 0.015
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'fullClock:inst10|debouncer:b2v_inst12|Smooth'
+Slack : 0.031
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.035
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.044
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.192
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.202
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.214
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.271
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_2:b2v_div2|divide_by_2'
+Slack : 0.287
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'Clock'
+Slack : 0.474
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clockGenerator:clcok24|divide_by_2:b2v_inst12|divide_by_2'
+Slack : 0.653
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'fullClock:inst10|debouncer:b2v_inst12|Smooth'
+Slack : 0.691
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clock'
+Slack : -3.000
+TNS   : -21.913
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'fullClock:inst10|debouncer:b2v_inst12|clock_divider_1024:b2v_inst|inst10'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_2:b2v_inst12|divide_by_2'
+Slack : -1.000
+TNS   : -6.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'fullClock:inst10|debouncer:b2v_inst12|Smooth'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_2:b2v_div2|divide_by_2'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst1|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst2|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst3|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst4|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst5|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_inst7|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_10:b2v_int6|divide_by_5:b2v_div5|SYNTHESIZED_WIRE_10'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clockGenerator:clcok24|divide_by_5:b2v_inst|SYNTHESIZED_WIRE_10'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'fullClock:inst10|debouncer:b2v_inst12|clock_divider_1024:b2v_inst1|inst10'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------

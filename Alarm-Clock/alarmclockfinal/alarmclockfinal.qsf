@@ -1,0 +1,97 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2022  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 21.1.1 Build 850 06/23/2022 SJ Standard Edition
+# Date created = 16:12:18  December 06, 2022
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		alarmclockfinal_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Intel recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY alarmclockfinal
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 21.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:12:18  DECEMBER 06, 2022"
+set_global_assignment -name LAST_QUARTUS_VERSION "21.1.1 Standard Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name BDF_FILE alarmclockfinal.bdf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_M21 -to alarmHrIncrement
+set_location_assignment PIN_M23 -to alarmMinIncrement
+set_location_assignment PIN_AB28 -to alarmWrite
+set_location_assignment PIN_Y2 -to clock
+set_location_assignment PIN_AD18 -to HrL0
+set_location_assignment PIN_AC18 -to HrL1
+set_location_assignment PIN_AB18 -to HrL2
+set_location_assignment PIN_AH19 -to HrL3
+set_location_assignment PIN_AG19 -to HrL4
+set_location_assignment PIN_AF18 -to HrL5
+set_location_assignment PIN_AH18 -to HrL6
+set_location_assignment PIN_AB19 -to HrR0
+set_location_assignment PIN_AA19 -to HrR1
+set_location_assignment PIN_AG21 -to HrR2
+set_location_assignment PIN_AH21 -to HrR3
+set_location_assignment PIN_AE19 -to HrR4
+set_location_assignment PIN_AF19 -to HrR5
+set_location_assignment PIN_AE18 -to HrR6
+set_location_assignment PIN_V21 -to MinL0
+set_location_assignment PIN_U21 -to MinL1
+set_location_assignment PIN_AB20 -to MinL2
+set_location_assignment PIN_AA21 -to MinL3
+set_location_assignment PIN_AD24 -to MinL4
+set_location_assignment PIN_AF23 -to MinL5
+set_location_assignment PIN_Y19 -to MinL6
+set_location_assignment PIN_AA25 -to MinR0
+set_location_assignment PIN_AA26 -to MInR1
+set_location_assignment PIN_Y25 -to MinR2
+set_location_assignment PIN_W26 -to MinR3
+set_location_assignment PIN_Y26 -to MinR4
+set_location_assignment PIN_W27 -to MinR5
+set_location_assignment PIN_W28 -to MinR6
+set_location_assignment PIN_Y23 -to RESET
+set_location_assignment PIN_F17 -to secondBlinker
+set_location_assignment PIN_AC28 -to ClockSet
+set_location_assignment PIN_N21 -to MinSet
+set_location_assignment PIN_R24 -to HrSet
+set_location_assignment PIN_Y24 -to AlarmOn/Off
+set_location_assignment PIN_J19 -to Alarm0
+set_location_assignment PIN_H19 -to Alarm1
+set_location_assignment PIN_J17 -to Alarm2
+set_location_assignment PIN_G17 -to Alarm3
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
