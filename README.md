@@ -14,21 +14,21 @@ An FPGA-based digital alarm clock that tracks time in HH:MM format, supports rea
 
 ## Features 
 - Clock Generator
- - Reduces 50 MHz board clock to ~1 Hz using a chain of divide-by-5, divide-by-10, and divide-by-2 modules
+  - Reduces 50 MHz board clock to ~1 Hz using a chain of divide-by-5, divide-by-10, and divide-by-2 modules
 - Hour and Minute Counters
- - Counts up to 24 for hours and 60 for minutes
- - Built using T flip-flops and reset logic
+  - Counts up to 24 for hours and 60 for minutes
+  - Built using T flip-flops and reset logic
 - Display Logic
- - BCD Converters translate 5- and 6-bit binary counts to two-digit decimal output
- - 7-segment decoders light up segments appropriately
+  - BCD Converters translate 5- and 6-bit binary counts to two-digit decimal output
+  - 7-segment decoders light up segments appropriately
 - Alarm Comparison
- - Registers store alarm time (set via switches and debounced buttons)
- - XNOR-based comparators output HIGH when alarm and clock match
- - AND gate combines hour and minute matches to trigger LEDs
+  - Registers store alarm time (set via switches and debounced buttons)
+  - XNOR-based comparators output HIGH when alarm and clock match
+  - AND gate combines hour and minute matches to trigger LEDs
 - Clock/Alarm Setting Interface
- - Switches toggle between normal and setting modes
- - Debouncers prevent unintended multiple button presses
- - Muxes choose between real-time and set values for display
+  - Switches toggle between normal and setting modes
+  - Debouncers prevent unintended multiple button presses
+  - Muxes choose between real-time and set values for display
  
 ## Hardware Used 
 - Altera DE2-115 FPGA Development Board
